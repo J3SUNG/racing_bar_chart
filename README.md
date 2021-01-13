@@ -16,3 +16,4 @@ This session is about creating a Racing Bar Chart.
 `npm install`
 
 `npm start`
+# racing_bar_chart
