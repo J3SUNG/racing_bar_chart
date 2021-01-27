@@ -47,6 +47,23 @@ function App() {
       value: 55,
       color: "#faaa69",
     },
+    {
+      name: "test1",
+      value: 51,
+      color: "#fa2acc",
+    },
+
+    {
+      name: "test2",
+      value: 52,
+      color: "#f11169",
+    },
+
+    {
+      name: "test3",
+      value: 60,
+      color: "#f69669",
+    },
   ]);
 
   useInterval(() => {
