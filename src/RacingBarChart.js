@@ -21,29 +21,29 @@ function RacingBarChart({ data }) {
       .range([0, dimensions.height]); // [0, 200]
 
     const xScale = scaleLinear()
-      .domain([0, max(data, entry => entry.value)]) // [0, 65 (example)]
+      .domain([0, max(data, (entry) => entry.value)]) // [0, 65 (example)]
       .range([0, dimensions.width]); // [0, 400 (example)]
 
     // draw the bars
     svg
       .selectAll(".bar")
       .data(data, (entry, index) => entry.name)
-      .join(enter =>
+      .join((enter) =>
         enter.append("rect").attr("y", (entry, index) => yScale(index))
       )
-      .attr("fill", entry => entry.color)
+      .attr("fill", (entry) => entry.color)
       .attr("class", "bar")
       .attr("x", 0)
       .attr("height", yScale.bandwidth())
       .transition()
-      .attr("width", entry => xScale(entry.value))
+      .attr("width", (entry) => xScale(entry.value))
       .attr("y", (entry, index) => yScale(index));
 
     // draw the labels
     svg
       .selectAll(".label")
       .data(data, (entry, index) => entry.name)
-      .join(enter =>
+      .join((enter) =>
         enter
           .append("text")
           .attr(
@@ -51,9 +51,9 @@ function RacingBarChart({ data }) {
             (entry, index) => yScale(index) + yScale.bandwidth() / 2 + 5
           )
       )
-      .text(entry => `🐎 ... ${entry.name} (${entry.value} meters)`)
+      .text((entry) => `🐎 ... ${entry.name} (${entry.value} meters)`)
       .attr("class", "label")
-      .attr("x", 10)
+      .attr("x", -50) // 왼쪽에서 거리
       .transition()
       .attr("y", (entry, index) => yScale(index) + yScale.bandwidth() / 2 + 5);
   }, [data, dimensions]);
