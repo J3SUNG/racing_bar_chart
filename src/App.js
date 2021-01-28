@@ -87,7 +87,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <h1>Racing Bar Chart</h1>
+      {/* <h1>Racing Bar Chart</h1> */}
       <RacingBarChart data={data} />
       <button onClick={() => setStart(!start)}>
         {start ? "Stop the race" : "Start the race!"}
