@@ -53,7 +53,7 @@ function RacingBarChart({ data }) {
       )
       .text((entry) => `🐎 ... ${entry.name} (${entry.value} meters)`)
       .attr("class", "label")
-      .attr("x", -50) // 왼쪽에서 거리
+      .attr("x", -200) // 왼쪽에서 거리
       .transition()
       .attr("y", (entry, index) => yScale(index) + yScale.bandwidth() / 2 + 5);
   }, [data, dimensions]);
