@@ -83,7 +83,7 @@ function App() {
       console.log(time.getSeconds());
       setTime(time.getSeconds());
     }
-  }, 500);
+  }, 100);
 
   return (
     <React.Fragment>
