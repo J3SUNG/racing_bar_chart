@@ -22,7 +22,7 @@ function RacingBarChart({ data }) {
 
     const xScale = scaleLinear()
       .domain([0, max(data, (entry) => entry.value)]) // [0, 65 (example)]
-      .range([0, dimensions.width - 500]); // [0, 400 (example)] //좌우길이
+      .range([0, dimensions.width - 500]); // [0, 400 (example)]
 
     // draw the bars
     svg
