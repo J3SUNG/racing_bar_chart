@@ -60,7 +60,7 @@ function App() {
     },
 
     {
-      name: "test3",
+      name: "owen",
       value: 60,
       color: "#f69669",
     },
