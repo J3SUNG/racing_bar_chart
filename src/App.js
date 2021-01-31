@@ -30,7 +30,7 @@ function App() {
     {
       name: "delta",
       value: 25,
-      color: "#9656a1",
+      color: "#9556a1",
     },
     {
       name: "echo",
